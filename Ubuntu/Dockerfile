@@ -2,8 +2,8 @@
 ARG BASE_IMAGE_NAME=""
 ARG BASE_IMAGE_VERSION=""
 
-# Pulling image specified by the variables passed as arguments to docker build and referring it as `ubuntu` for the rest of the Dockerfile. 
-FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_VERSION} AS ubuntu
+# Pulling image specified by the variables passed as arguments to docker build and referring it as `build` for the rest of the Dockerfile. 
+FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_VERSION} AS build
 
 RUN mkdir -p /app
 

@@ -15,7 +15,14 @@ Add the optional argument `--no-cache` to run the container from scratch.
 
 ## HOWTO run Docker container     
 Run `run-docker.sh` to run the container after building it.
+`run-docker-shell.sh` can be used to open command line instead of directly executing the application.  
+  
 
+# Container Types  
+
+- [Ubuntu](Ubuntu) - This is a simple ubuntu docker container which runs a simple bash script after building and running.  
+- [Runtime-container](Runtime-container) - This is again an Ubuntu container which runs a `HelloWorld` executable i.e C or C++ source code inside the docker container.  
+   This example specifies how to use runtime container to get rid of all the source files that we copy present in the container for building the executable and only provide the executable in the final docker container image.     
 
 ## General Information about Docker Containers    
  - Each instruction in `Dockerfile` creates a layer.
