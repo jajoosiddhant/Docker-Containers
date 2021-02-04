@@ -4,16 +4,20 @@ Each directory consists of `build-docker.sh` and `run-docker.sh` scripts to buil
 All the different containers listed in this repository will follow the same format.  
 Look for inline comments in `build-docker.sh`, `run-docker.sh` and `Dockerfile` to learn more about docker.  
  
-## PREREQUISITE TO BUILD DOCKER CONTAIHNER  
+## Prerequisites for building docker containers  
+Type `docker` on commandline to see if docker is installed.
+If not, install the docker container using [docker-install.sh](docker-install.sh) script.  
 Rename the `container.conf.template` file to `container.conf` file and populate the variables with the required contents.  
 OR  
 Create a file `container.conf` with the contents similar to `container.conf.template` in the same directory.
-
-## HOWTO build Docker container  
+ 
+ 
+## HOWTO build docker container  
 Run `build-docker.sh` to build the container.
 Add the optional argument `--no-cache` to run the container from scratch.    
-
-## HOWTO run Docker container     
+ 
+ 
+## HOWTO run docker container     
 Run `run-docker.sh` to run the container after building it.
 
 
