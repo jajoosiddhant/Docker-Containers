@@ -10,7 +10,7 @@ source container.conf
 # --rm -> Removes the container onces it exits.
 # -d -> Runs the container in detached mode i.e in the background
 # -it -> For interactive processes (like a shell), use -i -t together in order to allocate a tty for the container process.
-docker run \
+docker run $@ \
     --rm \
     --pid=host \
     --name ${CONTAINER_NAME} \

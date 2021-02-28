@@ -5,14 +5,15 @@ ARG BASE_IMAGE_VERSION=""
 # Pulling image specified by the variables passed as arguments to docker build and referring it as `build` for the rest of the Dockerfile. 
 FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_VERSION} AS build
 
-# Needed for tzdata related installs
+# Tell apt-get we're never going to be able to give manual feedback
+# Needed for tzdata related installs, needed for `build-essential` as it asks for input.
 ENV DEBIAN_FRONTEND="noninteractive"
 ENV TZ="America/Denver"
 
 # Installing packages required to build 
-RUN apt-get update -y && apt-get install -y \
+RUN apt-get update -y && apt-get install -y --no-install-recommends \
     build-essential \
-    cmake
+    cmake 
 
 RUN mkdir -p /app/build
 
